@@ -1,0 +1,93 @@
+.pagination-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: var(--body-font);
+}
+
+.pagination-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.pagination-items {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pagination-item {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.pagination-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #4f46e5 !important;
+  color: white !important;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #4f46e5 !important;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  font-weight: bold;
+  background-color: #4f46e5 !important;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: #555;
+}
+
+body.dark-mode .pagination-btn {
+  background-color: #444; /* ลบหรือไม่ใส่ */
+  color: #eee;
+}
+
+body.dark-mode .pagination-page {
+  background-color: #1e1e1e;
+  color: black;
+}
+
+body.dark-mode .pagination-item {
+  background-color: white;
+  border-color: white;
+}
+
+body.dark-mode .pagination-title {
+  color: white;
+}
+
+body.dark-mode .loading {
+  color: white;
+}

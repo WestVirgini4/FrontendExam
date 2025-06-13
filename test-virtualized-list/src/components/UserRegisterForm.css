@@ -1,0 +1,279 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 420px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-icon {
+  background-color: #4f46e5;
+  display: inline-flex;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.user-icon {
+  color: white;
+  width: 32px;
+  height: 32px;
+}
+
+.header-title {
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-subtitle {
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.input-error {
+  border-color: #dc2626;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.error-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25rem;
+}
+
+/* Password Field */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+  color: #666;
+}
+
+/* Password Strength */
+.password-strength {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.strength-bar {
+  background-color: #eee;
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.strength-weak .strength-fill {
+  width: 25%;
+  background-color: #dc2626;
+}
+
+.strength-medium .strength-fill {
+  width: 50%;
+  background-color: #f59e0b;
+}
+
+.strength-good .strength-fill {
+  width: 75%;
+  background-color: #10b981;
+}
+
+.strength-strong .strength-fill {
+  width: 100%;
+  background-color: #22c55e;
+}
+
+.strength-text {
+  color: #444;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #4338ca;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-link {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.success-card {
+  text-align: center;
+  background-color: #ecfdf5;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 420px;
+  width: 100%;
+}
+
+.success-icon {
+  color: #22c55e;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.success-message {
+  margin-top: 0.5rem;
+  color: #065f46;
+}
+
+@media (max-width: 480px) {
+  .register-card, .success-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-input {
+    padding-left: 2.25rem;
+  }
+}
+
+body.dark-mode .form-label,
+body.dark-mode .header-title,
+body.dark-mode .header-subtitle,
+body.dark-mode .strength-text,
+body.dark-mode .footer-text,
+body.dark-mode .submit-button {
+    color: #ffffff;
+}
+
+body.dark-mode .register-card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .form-input {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #555;
+}
+
+body.dark-mode .form-input::placeholder {
+    color: #aaa;
+}
+
+body.dark-mode .error-message {
+    color: #ff6b6b;
+}
+
+body.dark-mode .success-title{
+  color: black;
+}

@@ -1,0 +1,21 @@
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card,
+body.dark-mode .sidebar,
+body.dark-mode .pagination-btn {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark-mode a.active {
+  background-color: #444;
+}
+
+.dark-mode-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+}

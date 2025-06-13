@@ -1,0 +1,160 @@
+.topbar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1200;
+  background: transparent;
+}
+
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.hamburger:hover {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.dark-mode-container {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  color: black;
+  background: transparent;
+}
+
+.dark-mode-container:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  z-index: 1100;
+  border-right: 2px solid #111;
+  border-radius: 1rem;
+  padding: 60px 10px 20px 10px;
+  width: 240px;
+}
+
+.sidebar.closed {
+  width: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar.closed .title {
+  display: none;
+}
+
+.title {
+  padding-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a i {
+  font-size: 20px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.sidebar.closed a span {
+  display: none;
+}
+
+.sidebar a:hover {
+  background-color: #e0e0e0;
+  color: #007bff;
+}
+
+.sidebar a.active {
+  color: black;
+  font-weight: 700;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: inherit;
+}
+
+body.dark-mode .sidebar {
+  background-color: #222;
+  color: #ddd;
+}
+
+body.dark-mode .sidebar a {
+  color: #ccc;
+}
+
+body.dark-mode .sidebar a.active {
+  color: #fff;
+}
+
+body.dark-mode .sidebar a:hover {
+  background-color: #e0e0e0;
+  color: #007bff;
+}
+
+.dark-mode-toggle i {
+  font-size: 24px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle i {
+  color: white;
+}
+
+body.dark-mode .hamburger {
+  color: white;
+}
+
+
